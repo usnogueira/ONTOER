@@ -1,0 +1,2206 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.owl-ontologies.com/Ontology1398432274.owl#"
+     xml:base="http://www.owl-ontologies.com/Ontology1398432274.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_Figure_Table_Author -->
+
+    <owl:AnnotationProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_Figure_Table_Author"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_Figure_Table_Label -->
+
+    <owl:AnnotationProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_Figure_Table_Label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#hasBlock -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#hasBlock">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Block"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Publication"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#SlideShow"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#isBlockOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#hasComponent">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Components"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#isComponentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#hasSlide -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#hasSlide">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Slide"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#SlideShow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#isBlockOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#isBlockOf">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Block"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Publication"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#SlideShow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#isComponentOf">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Components"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#isSlideOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#isSlideOf">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Slide"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#SlideShow"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#hasSlide"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements_Footnote -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements_Footnote">
+        <rdfs:comment rdf:datatype="&xsd;string">A footnote. The location of the Footnote element identifies the location of the first reference to the footnote. Additional references to the same footnote can be inserted with FootnoteRef.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements_Footnoteref -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements_Footnoteref">
+        <rdfs:comment rdf:datatype="&xsd;string">This element generates the same mark or link as the Footnote to which it points.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements_ForeignPharse -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements_ForeignPharse">
+        <rdfs:comment rdf:datatype="&xsd;string">A word or phrase in a language other than the primary language of the document.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements_Ulink -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements_Ulink">
+        <rdfs:comment rdf:datatype="&xsd;string">A link that addresses its target by means of a URL (Uniform Resource Locator).</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#annotation_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#annotation_Date">
+        <rdfs:comment xml:lang="en">Date that this annotation was created.
+</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#annotation_Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#annotation_Description">
+        <rdfs:comment xml:lang="en">The content of this annotation.
+</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#annotation_Entity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#annotation_Entity">
+        <rdfs:comment xml:lang="en">Entity (i.e., people, organization) that created this annotation.
+</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_Author -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_Author">
+        <rdfs:comment>The author of the Figure ou the Table.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Figure"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Graphic"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Table"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_Content -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_Content">
+        <rdfs:comment>A content of chapter, section, appendix, glossary, bibliography, index, paragraph or preface</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Appendix"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Bibliography"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Chapter"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Glossary"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Index"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Paragraph"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Preface"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Section"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_FileReference -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_FileReference">
+        <rdfs:comment>Storage location of the table, picture or graphic.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Figure"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Graphic"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Table"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_ItemizedList_Content -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_ItemizedList_Content">
+        <rdfs:comment rdf:datatype="&xsd;string">Content of the Itemized List</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#ItemizedList"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_ItemizedList_Mark -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_ItemizedList_Mark">
+        <rdfs:comment>Mark contains a keyword indicating the type of mark to be used on items in this ItemizedList. DocBook does not provide a fixed list of appropriate keywords.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#ItemizedList"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">bullet</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">opencircle</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_ItemizedList_Spacing -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_ItemizedList_Spacing">
+        <rdfs:comment>Spacing indicates whether or not the vertical space in the list should be minimized.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#ItemizedList"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_Label -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_Label">
+        <rdfs:comment>The Label of the Figure ou the Table.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Figure"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Graphic"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Table"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_OrderedList_Content -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_OrderedList_Content">
+        <rdfs:comment rdf:datatype="&xsd;string">Content of the Ordered List</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#OrderedList"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_OrderedList_Continuation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_OrderedList_Continuation">
+        <rdfs:comment>If continuation is specified, it indicates how list numbering should begin relative to the immediately preceding list. Restarts, the default, indicates that numbering should begin again at 1. Continues indicates that numbering should begin where the preceding list left off.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#OrderedList"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">Continues</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">Restarts</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_OrderedList_Inheritnum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_OrderedList_Inheritnum">
+        <rdfs:comment>In a nested list, InheritNum indicates whether or not the enumeration of interior lists should include the numbers of containing list items. If InheritNum is Inherit then the third item of a list inside the second item of a list inside the fourth item of a list might be enumerated as “4.2.3”. If it is Ignore, the default, then it would be simply “3”. (The Numeration attribute controls the actual format of the item numbers, of course.)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#OrderedList"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">Ignore</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">Inherit</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_OrderedList_Numeration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_OrderedList_Numeration">
+        <rdfs:comment>Numeration specifies the style of numbering to be used for items in the current OrderedList.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#OrderedList"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">Arabic</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">lowerletter</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">lowerroman</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">upperletter</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">upperroman</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#block_OrderedList_Spacing -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#block_OrderedList_Spacing">
+        <rdfs:comment>Spacing indicates whether or not the vertical space in the list should be minimized.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#OrderedList"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#classification_Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#classification_Description">
+        <rdfs:comment xml:lang="en">Description of the learning object relative to the stated 9.1:Classification.Purpose of this specific classification, such as discipline, idea, skill level, educational objective, etc.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#classification_Keyword -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#classification_Keyword">
+        <rdfs:comment xml:lang="en">Keywords and phrases descriptive of the learning object relative to the stated 9.1:Classification.Purpose of this specific classification, such as accessibility, security level, etc., most relevant first.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#classification_Purpose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#classification_Purpose">
+        <rdfs:comment xml:lang="en">The purpose of classifying this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">accessibility</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">competency</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">discipline</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">educational level</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">educational objective</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">idea</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first rdf:datatype="&xsd;string">prerequisite</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                <rdf:first rdf:datatype="&xsd;string">restrictions</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                        <rdf:first rdf:datatype="&xsd;string">security level</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                <rdf:first rdf:datatype="&xsd;string">skill level</rdf:first>
+                                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#classification_TaxonPath_Source -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#classification_TaxonPath_Source">
+        <rdfs:comment xml:lang="en">The name of the classification system.
+This data element may use any recognized &quot;official&quot; taxonomy or any user-defined taxonomy.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#classification_TaxonPath_Taxon_Entry -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#classification_TaxonPath_Taxon_Entry">
+        <rdfs:comment xml:lang="en">The textual label of the taxon.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#classification_TaxonPath_Taxon_Id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#classification_TaxonPath_Taxon_Id">
+        <rdfs:comment xml:lang="en">The identifier of the taxon, such as a number or letter combination provided by the source of the taxonomy.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#educational_Context -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#educational_Context">
+        <rdfs:comment xml:lang="en">The principal environment within which the learning and use of this learning object is intended to take place.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">higher education</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">school</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">training</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#educational_Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#educational_Description">
+        <rdfs:comment xml:lang="en">Comments on how this learning object is to be used.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#educational_Difficulty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#educational_Difficulty">
+        <rdfs:comment xml:lang="en">How hard it is to work with or through this learning object for the typical intended target audience.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">difficult</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">easy</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">medium</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">very difficult</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">very easy</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#educational_IntendedEndUserRole -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#educational_IntendedEndUserRole">
+        <rdfs:comment xml:lang="en">Principal user(s) for which this learning object was designed, most dominant first.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">author</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">learner</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">manager</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">teacher</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#educational_InteractivityLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#educational_InteractivityLevel">
+        <rdfs:comment xml:lang="en">The degree of interactivity characterizing this learning object. Interactivity in this context refers to the degree to which the learner can influence the aspect or behavior of the learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">high</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">low</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">medium</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">very high</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">very low</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#educational_InteractivityType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#educational_InteractivityType">
+        <rdfs:comment xml:lang="en">Predominant mode of learning supported by this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">active</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">expositive</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">mixed</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#educational_Language -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#educational_Language">
+        <rdfs:comment xml:lang="en">The human language used by the typical intended user of this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#educational_LearningResourceType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#educational_LearningResourceType">
+        <rdfs:comment xml:lang="en">Specific kind of learning object. The most dominant kind shall be first.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">diagram</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">exam</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">exercise</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">experiment</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">figure</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">graph</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first rdf:datatype="&xsd;string">index</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                <rdf:first rdf:datatype="&xsd;string">lecture</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                        <rdf:first rdf:datatype="&xsd;string">narrative text</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                <rdf:first rdf:datatype="&xsd;string">problem statement</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                        <rdf:first rdf:datatype="&xsd;string">questionnaire</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                <rdf:first rdf:datatype="&xsd;string">self assessment</rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                        <rdf:first rdf:datatype="&xsd;string">simulation</rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                <rdf:first rdf:datatype="&xsd;string">slide</rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                        <rdf:first rdf:datatype="&xsd;string">table</rdf:first>
+                                                                                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#educational_SemanticDensity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#educational_SemanticDensity">
+        <rdfs:comment xml:lang="en">The degree of conciseness of a learning object. The semantic density of a learning object may be estimated in terms of its size, span, or --in the case of self-timed resources such as audio or video-- duration.
+The semantic density of a learning object is independent of its difficulty. It is best illustrated with examples of expositive material, although it can be used with active resources as well.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">high</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">low</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">medium</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">very high</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">very low</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#educational_TypicalAgeRange -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#educational_TypicalAgeRange">
+        <rdfs:comment xml:lang="en">Age of the typical intended user.
+This data element shall refer to developmental age, if that would be different from chronological age.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#educational_TypicalLearningTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#educational_TypicalLearningTime">
+        <rdfs:comment xml:lang="en">Approximate or typical time it takes to work with or through this learning object for the typical intended target audience.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#general_AggregationLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#general_AggregationLevel">
+        <rdfs:comment xml:lang="en">The functional granularity of this learning object.
+1: the smallest level of aggregation, e.g., raw media data or fragments.
+2: a collection of level 1 learning objects, e.g., a lesson.
+3: a collection of level 2 learning objects, e.g., a course.
+4: the largest level of granularity, e.g., a set of courses that lead to a certificate.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;int">1</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;int">2</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;int">3</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;int">4</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#general_Coverage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#general_Coverage">
+        <rdfs:comment xml:lang="en">The time, culture, geography or region to which this learning object applies.
+The extent or scope of the content of the learning object. Coverage will typically include spatial location (a place name or geographic coordinates), temporal period (a period label, date, or date range) or jurisdiction (such as a named administrative entity). Recommended best practice is to select a value from a controlled vocabulary (for example, the Thesaurus of Geographic Names [TGN]) and that, where appropriate, named places or time periods be used in preference to numeric identifiers such as sets of coordinates or date ranges.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#general_Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#general_Description">
+        <rdfs:comment xml:lang="en">A textual description of the content of this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#general_Identifier_Catalog -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#general_Identifier_Catalog">
+        <rdfs:comment xml:lang="en">The name or designator of the identification or cataloging scheme for this entry. A namespace scheme.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#general_Identifier_Entry -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#general_Identifier_Entry">
+        <rdfs:comment xml:lang="en">The value of the identifier within the identification or cataloging scheme that designates or identifies this learning object. A namespace specific string.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#general_Keyword -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#general_Keyword">
+        <rdfs:comment xml:lang="en">A keyword or phrase describing the topic of this learning object.
+This data element should not be used for characteristics that can be described by other data elements.
+</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#general_Language -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#general_Language">
+        <rdfs:comment xml:lang="en">The primary human language or languages used within this learning object to communicate to the intended user.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#general_Structure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#general_Structure">
+        <rdfs:comment xml:lang="en">Underlying organizational structure of this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">atomic</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">collection</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">hierarchical</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">linear</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">networked</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#general_Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#general_Title">
+        <rdfs:comment xml:lang="en">Name given to this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#lifeCycle_Contribute_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#lifeCycle_Contribute_Date">
+        <rdfs:comment xml:lang="en">The date of the contribution.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#lifeCycle_Contribute_Entity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#lifeCycle_Contribute_Entity">
+        <rdfs:comment xml:lang="en">The identification of and information about entities (i.e., people, organizations) contributing to this learning object. The entities shall be ordered as most relevant first.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#lifeCycle_Contribute_Role -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#lifeCycle_Contribute_Role">
+        <rdfs:comment xml:lang="en">Kind of contribution.
+</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">author</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">content provider</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">editor</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">educational validator</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">graphical designer</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">initiator</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first rdf:datatype="&xsd;string">instructional designer</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                <rdf:first rdf:datatype="&xsd;string">publisher</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                        <rdf:first rdf:datatype="&xsd;string">script writer</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                <rdf:first rdf:datatype="&xsd;string">subject matter expert</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                        <rdf:first rdf:datatype="&xsd;string">technical implementer</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                <rdf:first rdf:datatype="&xsd;string">technical validator</rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                        <rdf:first rdf:datatype="&xsd;string">terminator</rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                <rdf:first rdf:datatype="&xsd;string">unknown</rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                        <rdf:first rdf:datatype="&xsd;string">validator</rdf:first>
+                                                                                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#lifeCycle_Status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#lifeCycle_Status">
+        <rdfs:comment xml:lang="en">The completion status or condition of this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">draft</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">final</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">revised</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">unavailable</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#lifeCycle_Version -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#lifeCycle_Version">
+        <rdfs:comment xml:lang="en">The edition of this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_Contribute_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_Contribute_Date">
+        <rdfs:comment xml:lang="en">The date of the contribution.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_Contribute_Entity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_Contribute_Entity">
+        <rdfs:comment xml:lang="en">The identification of and information about entities (i.e., people, organizations) contributing to this metadata instance. The entities shall be ordered as most relevant first.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_Contribute_Role -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_Contribute_Role">
+        <rdfs:comment xml:lang="en">Kind of contribution. Exactly one instance of this data element with value &quot;creator&quot; should exist.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">creator</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">validator</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_Identifier_Catalog -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_Identifier_Catalog">
+        <rdfs:comment xml:lang="en">The name or designator of the identification or cataloging scheme for this entry. A namespace scheme.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_Identifier_Entry -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_Identifier_Entry">
+        <rdfs:comment xml:lang="en">The value of the identifier within the identification or cataloging scheme that designates or identifies this metadata record. A namespace specific string.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_Language -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_Language">
+        <rdfs:comment xml:lang="en">Language of this metadata instance. This is the default language for all LangString values in this metadata instance. If a value for this data element is not present in a metadata instance, then there is no default language for LangString values.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_MetadataSchema -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#meta-Metadata_MetadataSchema">
+        <rdfs:comment xml:lang="en">The name and version of the authoritative specification used to create this metadata instance.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#relation_Kind -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#relation_Kind">
+        <rdfs:comment xml:lang="en">Nature of the relationship between this learning object and the target learning object, identified by 7.2:Relation.Resource.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">hasformat</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">hasversion</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">isbasedon</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">isbasisfor</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">isformatof</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">ispartof</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first rdf:datatype="&xsd;string">isreferencedby</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                <rdf:first rdf:datatype="&xsd;string">isrequiredby</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                        <rdf:first rdf:datatype="&xsd;string">isversionof</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                <rdf:first rdf:datatype="&xsd;string">references</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                        <rdf:first rdf:datatype="&xsd;string">requires</rdf:first>
+                                                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#relation_Resource_Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#relation_Resource_Description">
+        <rdfs:comment xml:lang="en">Description of the target learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#relation_Resource_Identifier_Catalog -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#relation_Resource_Identifier_Catalog">
+        <rdfs:comment xml:lang="en">The name or designator of the identification or cataloging scheme for this entry. A namespace scheme.
+
+Repertoire of ISO/IEC 10646-1:2000
+</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#relation_Resource_Identifier_Entry -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#relation_Resource_Identifier_Entry">
+        <rdfs:comment xml:lang="en">The value of the identifier within the identification or cataloging scheme that designates or identifies the target learning object. A namespace specific string.
+
+Repertoire of ISO/IEC 10646-1:2000.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#rights_CopyrightAndOtherRestrictions -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#rights_CopyrightAndOtherRestrictions">
+        <rdfs:comment xml:lang="en">Whether copyright or other restrictions apply to the use of this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">no</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">yes</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#rights_Cost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#rights_Cost">
+        <rdfs:comment xml:lang="en">Whether use of this learning object requires payment.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">no</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">yes</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#rights_Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#rights_Description">
+        <rdfs:comment xml:lang="en">Comments on the conditions of use of this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#slide_Serial_Number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#slide_Serial_Number">
+        <rdfs:comment>Is a serial number of the slide.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Duration">
+        <rdfs:comment xml:lang="en">Time a continuous learning object takes when played at intended speed.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Format -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Format">
+        <rdfs:comment xml:lang="en">Technical datatype(s) of (all the components of) this learning object.
+This data element shall be used to identify the software needed to access the learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#technical_InstallationRemarks -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#technical_InstallationRemarks">
+        <rdfs:comment xml:lang="en">Description of how to install this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Location">
+        <rdfs:comment xml:lang="en">A string that is used to access this learning object. It may be a location (e.g., Universal Resource Locator), or a method that resolves to a location (e.g., Universal Resource Identifier). The first element of this list shall be the preferable location.
+</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#technical_OtherPlatformRequirements -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#technical_OtherPlatformRequirements">
+        <rdfs:comment xml:lang="en">Information about other software and hardware requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Requirement_OrComposite_MaximumVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Requirement_OrComposite_MaximumVersion">
+        <rdfs:comment xml:lang="en">Highest possible version of the required technology to use this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Requirement_OrComposite_MinimumVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Requirement_OrComposite_MinimumVersion">
+        <rdfs:comment xml:lang="en">Lowest possible version of the required technology to use this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Requirement_OrComposite_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Requirement_OrComposite_Name">
+        <rdfs:comment xml:lang="en">Name of the required technology to use this learning object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Requirement_OrComposite_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Requirement_OrComposite_Type">
+        <rdfs:comment xml:lang="en">The technology required to use this learning object, e.g., hardware, software, network, etc.
+</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#technical_Size">
+        <rdfs:comment xml:lang="en">The size of the digital learning object in bytes (octets). The size is represented as a decimal value (radix 10). Consequently, only the digits &quot;&quot; through &quot;&quot; should be used. The unit is bytes, not Mbytes, GB, etc.
+</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;int">0</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;int">1</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;int">2</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;int">3</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;int">4</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;int">5</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first rdf:datatype="&xsd;int">6</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                <rdf:first rdf:datatype="&xsd;int">7</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                        <rdf:first rdf:datatype="&xsd;int">8</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                <rdf:first rdf:datatype="&xsd;int">9</rdf:first>
+                                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#title">
+        <rdfs:comment rdf:datatype="&xsd;string">A tittle of chapter, section, appendix, glossary, bibliography, index or preface</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Appendix"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Bibliography"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Chapter"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Glossary"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Index"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Preface"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Section"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Slide"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Title"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Animation -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Animation">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Audio"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Movie"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Publication"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#SlideShow"/>
+        <rdfs:comment xml:lang="en">Animation is a Learning Object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Appendix -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Appendix">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Components"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Bibliography"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Block"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Chapter"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Glossary"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Index"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Preface"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Section"/>
+        <rdfs:comment rdf:datatype="&xsd;string">An appendix in a Book or Article. Appendixes usually occur at the end of a document. Formatted as a displayed block. Usually introduces a forced page break and often starts on the next recto page. Sometimes restarts page numbering. Typically, appendixes are lettered rather than numbered, and appear in the table of contents.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Audio -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Audio">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Movie"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Publication"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#SlideShow"/>
+        <rdfs:comment xml:lang="en">Audio is a Learning Object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Bibliography -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Bibliography">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Components"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Block"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Chapter"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Glossary"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Index"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Preface"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Section"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A bibliography. A DocBook bibliography may contain some preferatory matter, but its main content is a set of bibliography entries. These may occur inside BiblioDivs, instead of appearing directly in the Bibliograpy.
+Formatted as a displayed block. A Bibliography in a Book frequently causes a forced page break in print media.
+
+Some systems may display only those entries within a Bibliography that are cited in the containing document. This may be an interchange issue.
+
+The two styles of bibliography entry have quite different processing expectations.  Entries in a Bibliography are “raw;” they contain a database-like collection of named fields.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Block -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Block">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Components"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Chapter"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Glossary"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Index"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Preface"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Section"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The block elements occur immediately below the component and sectioning elements. These are the (roughly) paragraph-level elements in DocBook. They can be divided into a number of categories: lists, admonitions, line-specific environments, synopses of several sorts, tables, figures, examples, and a dozen or more miscellaneous elements.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Chapter -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Chapter">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Components"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#hasBlock"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Block"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Glossary"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Index"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Preface"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Section"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A chapter, as of a book. Formatted as a displayed block. Usually introduces a forced page break and often starts on the next recto page. The first chapter of a document usually restarts page numbering. Typically, chapters are numbered and presented in the table of contents.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Components -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Components">
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Slide"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Components are the chapter-like elements of a Book or Part: Preface, Chapter, Appendix, Glossary, and Bibliography. Articles can also occur at the component level. Components generally contain block elements and/or sections, and some can contain navigational components and reference page.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Figure -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Figure">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Block"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Graphic"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#List"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Paragraph"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Table"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Title"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Is a formal example with a title. Figures often contain Graphics, or other large, display elements. Frequently they are given IDs and referenced from the text with  cross reference to another part of the document or a hypertext link.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Footnote -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Footnote">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Footnoteref"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#ForeignPhrase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Ulink"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A footnote. The location of the Footnote element identifies the location of the first reference to the footnote.
+
+This element is a wrapper around the contents of a footnote.
+
+The Footnote element usually generates a mark (a superscript symbol or number) at the place in the flow of the document in which it occurs. The body of the footnote is then presented elsewhere, typically at the bottom of the page.
+
+Alternative presentations are also possible. In print environments that do not support footnotes at the bottom of the page, they may be presented as end notes occurring at the end of the component that contains the Footnote. Online systems may choose to present them inline or as “pop-ups,” or links, or any combination thereof.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Footnoteref -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Footnoteref">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#ForeignPhrase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Ulink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#ForeignPhrase -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#ForeignPhrase">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Ulink"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A word or phrase in a language other than the primary language of the document.
+
+Can be used to markup the text of a foreign word or phrase. “Foreign” in this context means that it is a language other than the primary language of the document and is not intended to be pejorative in any way.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Glossary -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Glossary">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Components"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Index"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Preface"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Section"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A Glossary contains a collection of terms and brief descriptions or definitions of those terms.
+These elements contain glossary: appendix, article, chapter, preface, section.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Graphic -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Graphic">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Block"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#List"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Paragraph"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Table"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Title"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Graphics occur most frequently in Figures and ScreenShots, but they can also occur without a wrapper. DocBook considers a Graphic a block element, even if it appears to occur inline. For graphics that you want to be represented inline, use InlineGraphic.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Index -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Index">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Components"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Preface"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Section"/>
+        <rdfs:comment rdf:datatype="&xsd;string">An index.  contains the formatted index of a document. An index may begin with introductory material, followed by any number of an entry or a division in an index. Formatted as a displayed block. An Index in a Book frequently causes a forced page break in print media.
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Components"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Preface"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Section"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Inline elements are used to mark up running text. In published documents, inline elements often cause a font change or other small change, but they do not cause line or paragraph breaks.
+
+In practice, writers generally settle on the tagging of inline elements that suits their time and subject matter. This may be a large number of elements or only a handful. What is important is that you choose to mark up not every possible item, but only those for which distinctive tagging will be useful in the production of the finished document for the readers who will search through it.
+
+The following comprehensive list may be a useful tool for the process of narrowing down the elements that you will choose to mark up; it is not intended to overwhelm you by its sheer length. For convenience, we&apos;ve divided the inlines into several subcategories.
+
+The classification used here is not meant to be authoritative, only helpful in providing a feel for the nature of the inlines. Several elements appear in more than one category, and arguments could be made to support the placement of additional elements in other categories or entirely new categories.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Users of DocBook are provided with a surfeit of inline elements. Inline elements are used to mark up running text. In published documents, inline elements often cause a font change or other small change, but they do not cause line or paragraph breaks.
+
+In practice, writers generally settle on the tagging of inline elements that suits their time and subject matter. This may be a large number of elements or only a handful. What is important is that you choose to mark up not every possible item, but only those for which distinctive tagging will be useful in the production of the finished document for the readers who will search through it.
+
+The following comprehensive list may be a useful tool for the process of narrowing down the elements that you will choose to mark up; it is not intended to overwhelm you by its sheer length. For convenience, we&apos;ve divided the inlines into several subcategories.
+
+The classification used here is not meant to be authoritative, only helpful in providing a feel for the nature of the inlines. Several elements appear in more than one category, and arguments could be made to support the placement of additional elements in other categories or entirely new categories.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#ItemizedList -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#ItemizedList">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#List"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#OrderedList"/>
+        <rdfs:comment>A list in which each entry is marked with a bullet or other dingbat.
+
+In an ItemizedList, each member of the list is marked with a bullet, dash, or other symbol.
+
+DocBook specifies neither the initial mark nor the sequence of marks to be used in nested lists. If explicit control is desired, the Mark attribute should be used. The values of the Mark attribute are expected to be keywords, not representations (numerical character references, entities, and so on.) of the actual mark.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject">
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Slide"/>
+        <rdfs:comment rdf:datatype="&xsd;string"> Learning Object is:
+Animation or
+Audio or
+Movie or
+Publication or
+Slide Show
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#List -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#List">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Block"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Paragraph"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Table"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Title"/>
+        <rdfs:comment rdf:datatype="&xsd;string">There are seven list elements in DocBook:
+
+CalloutList
+A list of CallOuts and their descriptions. CallOuts are marks, frequently numbered and typically on a graphic or verbatim environment, that are described in a CalloutList, outside the element in which they occur.
+
+GlossList
+A list of glossary terms and their definitions.
+
+ItemizedList
+An unordered (bulleted) list. There are attributes to control the marks used.
+
+OrderedList
+A numbered list. There are attributes to control the type of enumeration.
+
+SegmentedList
+A repeating set of named items. For example, a list of states and their capitals might be represented as a SegmentedList.
+
+SimpleList
+An unadorned list of items. SimpleLists can be inline or arranged in columns.
+
+VariableList
+A list of terms and definitions or descriptions. (This list of list types is a VariableList.)
+
+Most commonly elements found are:
+
+ItemizedList
+An unordered (bulleted) list. There are attributes to control the marks used.
+
+OrderedList
+A numbered list. There are attributes to control the type of enumeration.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Movie -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Movie">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Publication"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#SlideShow"/>
+        <rdfs:comment xml:lang="en">Movie is a Learning Object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#OrderedList -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#OrderedList">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#List"/>
+        <rdfs:comment>A list in which each entry is marked with a sequentially incremented label.
+
+In an OrderedList, each member of the list is marked with a numeral, letter, or other sequential symbol (such as roman numerals).</rdfs:comment>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Paragraph -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Paragraph">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Block"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Table"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Title"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Paragraphs in DocBook may contain almost all inlines and most block elements. Sectioning and higher-level structural elements are excluded. DocBook offers two variants of paragraph: one which cannot contain block elements, and another, which has a title.
+
+Some processing systems may find the presence of block elements in a paragraph difficult to handle. On the other hand, it is frequently most logical, from a structural point of view, to include block elements, especially informal block elements, in the paragraphs that describe their content. There is no easy answer to this problem.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Preface -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Preface">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Components"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Section"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Introductory matter preceding the first chapter of a book.
+
+Preface is a preface or forward in a Book. The Preface element may appear more than once and should be used for all introductory chapter-like material. For example, a Book might have both a Foreward and an Introduction. Both should be tagged as Prefaces in DocBook.
+
+Formatted as a displayed block. Usually introduces a forced page break and often starts on the next recto page. It is common for the page numbers in prefaces to be displayed as roman numerals rather than arabic numerals. Prefaces are usually listed in the Table of Contents.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Publication -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Publication">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Components"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#SlideShow"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A publication can be a book, an article or any similar publication to any of these.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Section -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Section">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Components"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#hasBlock"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Block"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">There are several flavors of sectioning elements in DocBook:
+
+The  top-level sectioning elements in a component are the most common sectioning elements. They can occur in most component-level elements. These numbered section elements must be properly nested (Sect2s can only occur inside Sect1s, Sect3s can only occur inside Sect2s, and so on). There are five levels of numbered sections.
+
+The Section element is an alternative to numbered sections. Sections are recursive, meaning that you can nest them to any depth desired.
+
+In addition to numbered sections, there&apos;s the a terminal section that can occur at any level, but it cannot have any other sectioning element nested within it.
+
+can have only one section title and no content section.
+
+There are elements, which occur only in reference page, are analogous to the numbered section elements in components. There are only three levels of numbered section elements in a reference page.
+
+Glossarys, Bibliographys, and Indexes can be broken into top-level divisions, but not sections. Unlike sections, these elements do not nest.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Slide -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Slide">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#hasBlock"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Block"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Slide is a component of the one Slide Show.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#SlideShow -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#SlideShow">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#LearningObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#hasSlide"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Slide"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Slide Show is an apresentation in slide. A presentation may be composed of one or more slides.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Table -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Table">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Block"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Title"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A formal table in a document. The Table element identifies a formal table. DocBook uses the CALS table model, which describes tables geometrically using rows, columns, and cells.
+
+Tables may include column headers and footers, but there is no provision for row headers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Title -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Title">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#Block"/>
+        <rdfs:comment>Is a slide title.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1398432274.owl#Ulink -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1398432274.owl#Ulink">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1398432274.owl#InlineElements"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A link that addresses its target by means of a URL (Uniform Resource Locator).
+
+The ULink element forms the equivalent of an HTML anchor (&lt;A HREF=&quot;...&quot;&gt;) for cross reference by a Uniform Resource Locator (URL).
+
+Formatted inline. When rendered online, it is natural to make the content of the ULink element an active link. When rendered in print media, the URL might be ignored, printed after the text of the link, or printed as a footnote.
+
+When the content of the ULink element is empty, i.e., for either of the following cases: &lt;ulink url=&quot;...&quot;/&gt; and &lt;ulink url=&quot;...&quot;&gt;&lt;/ulink&gt;, the content of the url attribute should be rendered as the text of the link.
+
+Linking elements must not be nested within other linking elements (including themselves). Because DocBook is harmonizing towards XML, this restriction cannot easily be enforced by the DTD. The processing of nested linking elements is undefined.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
